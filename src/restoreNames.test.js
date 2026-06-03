@@ -7,6 +7,12 @@ describe('restoreNames', () => {
     expect(restoreNames).toBeInstanceOf(Function);
   });
 
+  it('should return undefined if users is empty array', () => {
+    const users = [];
+
+    expect(restoreNames(users)).toBeUndefined();
+  });
+
   it('restores firstName if it undefined', () => {
     const users = [
       {
